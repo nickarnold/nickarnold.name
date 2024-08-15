@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Nick's Wishlist</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/spcss@0.4.0'>
+  <script>
+  const wishlistData = [
+    {
+      name: 'Magnetic knife block',
+      url: 'https://360knifeblock.com/products/honey-bamboo'
+    },
+    {
+      name: 'Seiko Watch Strap Replacement - Very specific one for a watch that Linus ruined',
+      url: 'https://www.mastersintime.com/us/en/seiko-sportura-black-silicone-rubber-strap-r02n117w0.htm'
+    },
+    {
+      name: 'Stamina Inmotion Elliptical - for office under desk',
+      url: 'https://www.amazon.com/dp/B009N9PW1Q'
+    },
+    {
+      name: 'Dewalt 6 Gallon Pancake Air Compressor',
+      url: 'https://www.amazon.com/DEWALT-DWFP55126-6-Gallon-Pancake-Compressor/dp/B00K34UZBW'
+    },
+    {
+      name: 'OMEGA Moonwatch Professional',
+      url: 'https://www.omegawatches.com/en-us/watches/speedmaster/moonwatch-professional/product'
+    },
+  ];
+
+  /** Durstenfeld shuffle */
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  function displayWishlist() {
+    const wishlist = document.getElementById('wishlist');
+    
+    shuffleArray(wishlistData);
+
+    for(const listItem of wishlistData) {
+      const listElement = document.createElement('li');
+
+      const anchorElement = document.createElement('a');
+      anchorElement.href = listItem.url;
+      anchorElement.text = listItem.name;
+
+      listElement.appendChild(anchorElement);
+      wishlist.appendChild(listElement);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', displayWishlist);
+  } else {
+    displayWishlist();
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Nick's Wishlist</h1>
+  </header>
+  <section>
+    The items in this wishlist are listed in a randomized order. Every time the page is refreshed the list order is updated randomly.
+    <ul id="wishlist"></ul>
+  </section>
+</body>
+
