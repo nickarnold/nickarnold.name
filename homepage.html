@@ -4,6 +4,7 @@
   <script>(function() { window.counterscale = { q: [['set', 'siteId', 'nickarnold.name'], ['trackPageview']] }; })();</script>
   <script id="counterscale-script" src="https://counterscale.citylabs.workers.dev/tracker.js" defer></script>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
   <title>Nick Arnold - Software Engineer</title>
   <style>
     @font-face {
@@ -11,17 +12,20 @@
       src: url("fonts/gruppo.woff2");
     }
     html, body {
+      font-size: 24px;
       font-family: 'Gruppo';
-      color: #ddd;
+      color: #caf0f8;
     }
     body {
-      font-size: 24px;
+      font-size: 1.3em;
+      /* see: https://cssgradient.io/ */
+      background: rgb(0,65,194);
+      background: radial-gradient(circle, rgba(0,65,194,1) 40%, rgba(21,27,84,1) 80%); 
       background-size: 100vw 100vh;
-      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAxElEQVQImQG5AEb/AOnw///p9P//1uD7/5umxP9QWXr/OUNc/zQ6UP8yOUv/ODtK/wDL2vf/r77d/2p5mv83R2j/LTtW/yk0Rv8sNEH/MjhE/09TX/8AbYWn/0BXd/8oO1n/HzRJ/yIxRP8iLjr/MztG/2Bncf+zusT/ADBSf/8hQWf/GjJU/xowSP8eL0P/OkZW/3Z/jv+3v8z/3eXy/wAuXYn/GUVs/xxAYv8dOFP/N01k/3qLn/+ot8r/0N3u/9Dd7v++nmer9ydiPQAAAABJRU5ErkJggg==");
     }
     header {
-      margin-top: 20%;
-      margin-bottom: 20px;
+      margin-top: 10em;
+      margin-bottom: 2em;
       text-align: center;
     }
     footer {
@@ -41,7 +45,7 @@
 </head>
 <body>
   <header>
-    Nick Arnold - Software Engineer - Denver/Remote
+    Nick Arnold - Software Engineer & Technical Lead - Denver/Remote
   </header>
   <footer>
     <a id="github-link" class="profile-btn" href="https://github.com/nickarnold">
